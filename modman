@@ -1,0 +1,8 @@
+src/app/code/core/Mage/Review/                                     app/code/core/Mage/Review/
+src/app/design/adminhtml/default/default/template/review/          app/design/adminhtml/default/default/template/review/
+src/app/design/frontend/base/default/layout/review.xml             app/design/frontend/base/default/layout/review.xml
+src/app/design/frontend/base/default/template/review/              app/design/frontend/base/default/template/review/
+src/app/design/frontend/rwd/default/layout/review.xml              app/design/frontend/rwd/default/layout/review.xml
+src/app/design/frontend/rwd/default/template/review/               app/design/frontend/rwd/default/template/review/
+src/app/etc/modules/Mage_Review.xml                                app/etc/modules/Mage_Review.xml
+src/app/locale/en_US/Mage_Review.csv                               app/locale/en_US/Mage_Review.csv
