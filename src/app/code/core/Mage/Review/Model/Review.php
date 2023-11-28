@@ -186,7 +186,7 @@ class Mage_Review_Model_Review extends Mage_Core_Model_Abstract
     public function appendSummary($collection)
     {
         $entityIds = [];
-        foreach ($collection->getItems() as $_itemId => $_item) {
+        foreach ($collection->getItems() as $_item) {
             $entityIds[] = $_item->getId();
         }
 

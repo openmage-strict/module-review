@@ -234,8 +234,8 @@ class Mage_Review_Model_Resource_Review extends Mage_Core_Model_Resource_Db_Abst
      */
     public function afterDeleteCommit(Mage_Core_Model_Abstract $object)
     {
-        $read_adapter = $this->_getReadAdapter();
-        $select = $read_adapter->select()
+        $readAdapter = $this->_getReadAdapter();
+        $select = $readAdapter->select()
             ->from(
                 $this->_reviewTable,
                 [
@@ -244,8 +244,8 @@ class Mage_Review_Model_Resource_Review extends Mage_Core_Model_Resource_Db_Abst
             )
             ->where("entity_id = ?", $object->getEntityId())
             ->where("entity_pk_value = ?", $object->getEntityPkValue());
-        $total_reviews = $read_adapter->fetchOne($select);
-        if ($total_reviews == 0) {
+        $totalReviews = $readAdapter->fetchOne($select);
+        if ($totalReviews == 0) {
             $this->_getWriteAdapter()->delete($this->_aggregateTable, [
                 'entity_type = ?'   => $object->getEntityId(),
                 'entity_pk_value = ?' => $object->getEntityPkValue()
